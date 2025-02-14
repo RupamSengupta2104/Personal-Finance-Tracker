@@ -1,0 +1,13 @@
+venv\Scripts\activate
+pip install pandas matplotlib seaborn jupyter
+pip list
+pip freeze > requirements.txt
+type requirements.txt
+echo "venv/" > .gitignore
+echo "data/finance_data.csv" >> .gitignore
+echo "# Personal Finance Tracker" > README.md
+echo "## Features" >> README.md
+echo "- Track income and expenses" >> README.md
+echo "- Generate financial trend graphs" >> README.md
+python scripts/generate_finance_data.py
+doskey /history > command_history.txt
